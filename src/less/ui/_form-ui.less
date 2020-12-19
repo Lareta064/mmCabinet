@@ -1,0 +1,68 @@
+.form-item{
+	.form-item__label{
+		font-weight: bold;
+		font-size: 14px;
+		color: @pr;
+		margin-bottom: 15px;
+		
+	}
+	.form-item__group input{
+		display: block;
+		width: 100%;
+		height: 48px;
+		border:0;
+		border-bottom: 1px solid @inputBB;
+		font-size: 14px;
+		color: @pr;
+		font-family: inherit;
+		padding-left: 0;
+		padding-right: 0;
+		&::placeholder{
+			color: @sec;
+			position: relative;left: -5px;
+			
+		}
+	}
+	.error-message{
+		font-size: 12px;
+		line-height: 19px;
+		margin-top: 3px;
+		color: @ac;
+		display: none;
+	}
+	.form-item__group{
+		position: relative;
+	}
+	.error-icon{
+		width: 21px;
+		height: 21px;
+		border-radius: 50%;
+		background-color: @ac;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		top: 10px;
+		display: none;
+		&:after{
+			content: '!';
+			position: absolute;
+			color: #fff;
+			font-size: 15px;
+			transform: translate(-50%, -51%);
+			left: 50%;
+			top: 50%;
+		}
+	}
+}
+.form-item__group.incorrect{
+	.error-icon, .error-message{
+		display: block;
+	}
+	input, textarea{
+		border-bottom: 1px solid @ac;
+	}
+}
+.form-item +.form-item{
+	margin-top: 10px;
+}

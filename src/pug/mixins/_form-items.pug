@@ -1,0 +1,8 @@
+//form input
+mixin form-item(lbl, pld, typ='text', err)
+	.form-item&attributes(attributes)
+		span.form-item__label #{lbl}
+		.form-item__group.incorrect
+			.error-icon
+			input(type=" "+ typ name="" placeholder=" "+ pld)
+			p.error-message !{err}
