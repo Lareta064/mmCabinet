@@ -2,3 +2,8 @@
 	h2 Инпут формы
 	+form-item('Имя', 'Ваше имя', 'text', 'Ошибка')
 	+form-item('Имя', 'Ваше имя', 'text', 'Ошибка')
+	.form-item.form-item--btn
+		button(type='submit') Сбросить пароль
+	.form-badge__group
+		p Бонусы:
+		+form-badge('3620')

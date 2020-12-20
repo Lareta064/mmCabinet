@@ -1,50 +1,58 @@
-.form-item{
-	.form-item__label{
+.form-item {
+	.form-item__label {
 		font-weight: bold;
 		font-size: 14px;
 		color: @pr;
 		margin-bottom: 15px;
-		
+		font-family: @mainFontBold;
+
 	}
-	.form-item__group input{
+
+	.form-item__group input {
 		display: block;
 		width: 100%;
 		height: 48px;
-		border:0;
+		border: 0;
 		border-bottom: 1px solid @inputBB;
 		font-size: 14px;
 		color: @pr;
 		font-family: inherit;
 		padding-left: 0;
 		padding-right: 0;
-		&::placeholder{
+
+		&::placeholder {
 			color: @sec;
-			position: relative;left: -5px;
-			
+			position: relative;
+			left: -5px;
+
 		}
 	}
-	.error-message{
+
+	.error-message {
 		font-size: 12px;
 		line-height: 19px;
 		margin-top: 3px;
-		color: @ac;
+		color: @ac1;
 		display: none;
 	}
-	.form-item__group{
+
+	.form-item__group {
 		position: relative;
 	}
-	.error-icon{
+
+	.error-icon {
 		width: 21px;
 		height: 21px;
 		border-radius: 50%;
-		background-color: @ac;
+		background-color: @ac1;
 		position: absolute;
 		top: 0;
 		right: 0;
 		z-index: 2;
 		top: 10px;
 		display: none;
-		&:after{
+
+		&:after {
 			content: '!';
 			position: absolute;
 			color: #fff;
@@ -55,14 +63,107 @@
 		}
 	}
 }
-.form-item__group.incorrect{
-	.error-icon, .error-message{
+
+.form-item__group.incorrect {
+
+	.error-icon,
+	.error-message {
 		display: block;
 	}
-	input, textarea{
-		border-bottom: 1px solid @ac;
+
+	input,
+	textarea {
+		border-bottom: 1px solid @ac1;
 	}
 }
-.form-item +.form-item{
+
+.form-item+.form-item {
 	margin-top: 10px;
+}
+
+.form-item.form-item--btn {
+	margin-top: 30px;
+
+	button {
+		width: 100%;
+		height: 39px;
+		line-height: 35px;
+		border: 2px solid @ac1;
+		border-radius: 20px;
+		text-align: center;
+		color: @ac1;
+		font-size: 13px;
+		font-weight: 700;
+		background-color: #fff;
+		font-family: 'rawlinebold';
+		cursor: pointer;
+		transition: .3s;
+
+		&:hover {
+			color: #fff;
+			background-color: @ac1;
+		}
+
+		
+	}
+&.form-item--btn-short {
+			button {
+				width: auto;
+				padding-left: 30px;
+				padding-right: 30px;
+				line-height: 33px;
+			}
+		}
+	.form-item__text {
+		text-align: center;
+		margin-top: 20px;
+
+		a {
+			font-size: 14px;
+			line-height: 1.1;
+			color: @ac2;
+			border-bottom: 1px solid @ac2;
+
+			&:hover {
+				color: @ac1;
+			}
+		}
+
+	}
+}
+
+.form-badge {
+	width: 170px;
+	text-align: center;
+	height: 50px;
+	border-radius: 50px;
+	line-height: 50px;
+	background-color: @sec2;
+	font-size: 25px;
+
+	color: @ac1;
+	font-family: @mainFontBold;
+}
+
+.form-badge__group {
+	p {
+		font-size: 20px;
+		font-family: @mainFontBold;
+		margin-bottom: 10px;
+	}
+}
+
+.form-item.form-item--flex {
+	display: flex;
+	align-items: center;
+
+	.form-item__group {
+		width: 80%;
+	}
+
+	.form-item__label {
+		height: 48px;
+		margin-bottom: 0;
+		line-height: 48px;
+	}
 }

@@ -1,0 +1,43 @@
+.custom-tab__box{
+	display: none;
+}
+.custom-tab__box.active{
+	display: block;
+	animation-name: opac ;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.tabs__nav-item{
+	border: 0;
+	border-bottom: 4px solid transparent;
+	font-size: 25px;
+	line-height: 30px;
+	color: @sec;
+	transition: .3s;
+	font-family: @mainFontBold;
+	background-color: #fff;
+	cursor:pointer;
+	&:focus{
+		outline: none;
+	}
+}
+.tabs__nav-item.active{
+	border-bottom: 4px solid @ac1;
+	color: @pr;
+
+}
+.tabs__nav-item +.tabs__nav-item{
+	margin-left: 70px;
+}
+.custom-tabs__content{
+	padding-top: 43px;
+}
+@keyframes opac{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}

@@ -6,7 +6,7 @@ html, body{
 	padding: 0;
 	
 	color: @pr;
-	font-family: 'Montserrat', sans-serif;
+	font-family: @mainFont, sans-serif;
 	font-size: 16px;
 	line-height: normal;
 	
@@ -54,6 +54,9 @@ input,textarea, button{
 	  max-width: 708px;
 	}
   @media(min-width: 992px){max-width: 962px;}
-  @media(min-width: 1200){max-width: 1170px;}
+  @media(min-width: 1200px){
+	  max-width: 1170px;
+	  
+	}
 
 }

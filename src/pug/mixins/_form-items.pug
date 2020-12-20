@@ -1,8 +1,12 @@
 //form input
-mixin form-item(lbl, pld, typ='text', err)
+mixin form-item(lbl, pld, typ='text', addClass, err)
 	.form-item&attributes(attributes)
 		span.form-item__label #{lbl}
-		.form-item__group.incorrect
+		div(class=" "+ addClass)
 			.error-icon
 			input(type=" "+ typ name="" placeholder=" "+ pld)
-			p.error-message !{err}
+			if err
+				p.error-message !{err}
+//form badge
+mixin form-badge(text)
+	.form-badge #{text}

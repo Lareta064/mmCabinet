@@ -1,0 +1,11 @@
+section.recover-frame.lk-frame
+	.container
+		.recover-frame__content.lk-content
+			.lk-title
+				h1 Восстановление пароля
+			form(action="").recover-form
+				+form-item('Email', 'Введите Email', 'text', 'form-item__group', 'Введите корректный email')
+				+form-item('Пароль', 'Введите пароль', 'password', 'form-item__group')
+				.form-item.form-item--btn
+					button(type='submit') Сбросить пароль
+					

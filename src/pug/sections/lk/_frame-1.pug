@@ -1,0 +1,26 @@
+section.authorization-frame
+	.container
+		.authorization-frame__content
+			.custom-tabs
+				.custom-tabs__nav
+					button.tabs__nav-item.active(data-tab="1") Авторизация
+					button.tabs__nav-item(data-tab="2") Регистрация
+					
+				.custom-tabs__content
+					.custom-tab__box.custom-tab__one.active(data-content="1")
+						form(action="").authorization-form
+							+form-item('Email', 'Введите Email', 'text', 'incorrect form-item__group', 'Введите корректный email')
+							+form-item('Пароль', 'Введите пароль', 'password', 'form-item__group')
+							.form-item.form-item--btn
+								button(type='submit') Вход
+								.form-item__text
+									a(href="recover.html") Забыли пароль?
+					.custom-tab__box.custom-tab__two(data-content="2")
+						form(action="").authorization-form
+							+form-item('Email', 'Введите Email', 'text', 'form-item__group', 'Введите корректный email')
+							+form-item('Email', 'Введите Email', 'text', 'form-item__group', 'Введите корректный email')
+							+form-item('Email', 'Введите Email', 'text', 'form-item__group', 'Введите корректный email')
+							+form-item('Email', 'Введите Email', 'text', 'form-item__group', 'Введите корректный email')
+							+form-item('Пароль', 'Введите пароль', 'password', 'form-item__group')
+							.form-item.form-item--btn
+								button(type='submit') Регистрация
