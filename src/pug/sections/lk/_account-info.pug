@@ -1,3 +1,10 @@
+mixin table-row
+	tr
+		td 1.
+		td Наименование товара, описание/размер
+		td 1
+		td 250 руб
+		td 250 руб
 
 section.account-info.lk-frame
 	.container
@@ -28,5 +35,49 @@ section.account-info.lk-frame
 										p Заказов:
 										+form-badge('63')
 					.custom-tab__box.custom-tab__two(data-content="2")
-						p Content 2
-		
+						.order-history
+							.row
+								.col-xl-6
+									.order-history-table
+										h3.section-title История:
+										.custom-accordion
+											.accordion-card
+												button.accordion-card__btn(data-state="show") Заказ № 2007/640 от 21.07.2020 10:23:37 1500 руб.
+													.accordion-card-icon.rotate &larr;
+												article.accordion-card__content.show
+													table
+														+table-row
+														+table-row
+														+table-row
+											.accordion-card
+												button.accordion-card__btn(data-state="hide") Заказ № 2007/640 от 21.07.2020 10:23:37 1500 руб.
+													.accordion-card-icon &larr;
+												article.accordion-card__content
+													table
+														+table-row
+														+table-row
+														+table-row
+											.accordion-card
+												button.accordion-card__btn(data-state="hide") Заказ № 2007/640 от 21.07.2020 10:23:37 1500 руб.
+													.accordion-card-icon &larr;
+												article.accordion-card__content
+													table
+														+table-row
+														+table-row
+														+table-row
+											.accordion-card
+												button.accordion-card__btn(data-state="hide") Заказ № 2007/640 от 21.07.2020 10:23:37 1500 руб.
+													.accordion-card-icon &larr;
+												article.accordion-card__content
+													table
+														+table-row
+														+table-row
+														+table-row
+								.col-xl-6
+									.order-history-last
+										h3.section-title Последний заказ:
+										.order-last__content
+											.order-last__head
+												p Заказ № 2007/640 от 21.07.2020
+											.order-last__list
+												+info-list([{text1: 'Адрес доставки', text2: 'ул. Комсомольская, д. 28/4, кв. 552 Подъезд 3, Этаж 12'}, {text1: 'Способ оплаты::', text2: 'Наличными'}, {text1: 'E-mail:', text2: 'name@gmail.com'},{text1: 'Адрес доставки', text2: 'ул. Комсомольская, д. 28/4, кв. 552 Подъезд 3, Этаж 12'}])

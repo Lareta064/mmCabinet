@@ -26,3 +26,12 @@
 	font-style: normal;
 	}
 /* .box-name {font-family: 'Montserrat Bold';} */
+@font-face {
+	font-family: 'Montserrat Medium';
+	src: url('montserrat/Montserrat-Medium.eot');
+	src: url('montserrat/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+	url('montserrat/Montserrat-Medium.woff') format('woff'),
+	url('montserrat/Montserrat-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}

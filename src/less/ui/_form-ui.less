@@ -96,6 +96,10 @@
 		font-weight: 700;
 		background-color: #fff;
 		font-family: 'rawlinebold';
+		outline: none;
+		&:focus{
+			outline: none;
+		}
 		cursor: pointer;
 		transition: .3s;
 		&.disable{
@@ -131,10 +135,14 @@
 			font-size: 14px;
 			line-height: 1.1;
 			color: @ac2;
+			border:0px;
 			border-bottom: 1px solid @ac2;
-
+			border-radius: 0;
+			width: fit-content;
+			height: 20px;
 			&:hover {
 				color: @ac1;
+				background-color: #fff;
 			}
 		}
 

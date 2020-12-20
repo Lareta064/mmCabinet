@@ -14,25 +14,28 @@ if(accordionBlock){
 				if(item !== e.target){
 					item.setAttribute('data-state', 'hide');
 					item.nextElementSibling.classList.remove('show');
+					item.querySelector('.accordion-card-icon').classList.remove('rotate');
 					
 				}
 				else{
-					console.log(item.nextElementSibling);
+					
 					let thisAttrValue = item.getAttribute('data-state');
-					console.log(thisAttrValue);
-					let thisSibling = item.nextElementSibling
+					let thisSibling = item.nextElementSibling;
+					let accordHeadIcon = item.querySelector('.accordion-card-icon');
 					if(thisAttrValue == 'hide'){
 						item.setAttribute('data-state', 'show');
 						thisSibling.classList.add('show');
+						accordHeadIcon.classList.add('rotate');
 					}
 					else{
 						item.setAttribute('data-state', 'hide');
 						item.nextElementSibling.classList.remove('hide');
 						thisSibling.classList.remove('show');
+						accordHeadIcon.classList.remove('rotate');
 					}
 				}
 			}
 			
-		})
+		});
 	}
 }
