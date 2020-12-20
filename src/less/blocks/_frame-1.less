@@ -136,6 +136,10 @@
 }
 .account-info .custom-tabs{
 	width: 100%;
+	@media(max-width: 1199px){
+	max-width:570px;	
+	}
+	
 }
 .order-history .section-title{
 	font-size: 18px;
@@ -158,6 +162,21 @@
 	background: #F5F5F5;
 	border-radius: 7px;
 }
+.order-history-last{
+	@media(max-width:1199px){
+		margin-top: 80px;
+	}
+}
+
 .order-last__list{
 	padding-top: 33px;
+	.account-info__list ul li:last-child{
+		margin-top: 50px;
+		p:first-child, p:last-child{
+			font-size: 20px;
+			line-height: 24px;
+			color: @ac1;
+			font-family: @mainFontBold;
+		}
+	}
 }

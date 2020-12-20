@@ -1,8 +1,9 @@
 // список с горизонтальными полями
 mixin info-list(items)
-	.account-info__list
+	.account-info__list&attributes(attributes)
 		ul
 			each item in items
 				li
 					p #{item.text1}:
 					p  #{item.text2}
+				
