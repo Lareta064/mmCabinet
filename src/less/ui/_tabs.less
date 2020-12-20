@@ -21,6 +21,10 @@
 	&:focus{
 		outline: none;
 	}
+	@media(max-width:767px){
+		display: block;
+		width: fit-content;
+	}
 }
 .tabs__nav-item.active{
 	border-bottom: 4px solid @ac1;
@@ -29,6 +33,14 @@
 }
 .tabs__nav-item +.tabs__nav-item{
 	margin-left: 70px;
+	@media(max-width:991px){
+		margin-left: 40px;
+		
+	}
+	@media(max-width:767px){
+		margin-left: 0;
+		margin-top: 20px;
+	}
 }
 .custom-tabs__content{
 	padding-top: 43px;

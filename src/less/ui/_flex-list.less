@@ -4,8 +4,12 @@
 			display: flex;
 			padding-bottom: 10px;
 			border-bottom: 1px solid@inputBB;
+			
 			&+li{
 				margin-top: 23px;
+			}
+			@media(max-width:579px){
+				display: block;
 			}
 		}
 		li p:first-child{
@@ -15,6 +19,9 @@
 			font-family: @mainFontBold;
 			font-weight: 700;
 			width: 40%;
+			@media(max-width:579px){
+				width: 100%;
+			}
 		}
 		li p:last-child{
 			font-size: 16px;
@@ -22,7 +29,13 @@
 			color: @pr;
 			font-family: @mainFont;
 			text-align: right;
-			width: 52%;
+			width: 60%;
+			@media(max-width:579px){
+				width: 100%;
+				margin-top: 12px;
+				text-align: left;
+			}
+			
 		}
 	}
 }

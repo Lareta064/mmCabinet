@@ -1,0 +1,34 @@
+section.edit-profile.lk-frame
+	.container
+		.edit-profile__content
+			.lk-title.lk-title--flex
+				h1 Редактирование профиля
+				.lk-title__buttons
+					.btn-link.btn-link--dark
+						a(href="account-page.html") Назад
+					.btn-link
+						a(href="#!") Выход
+			
+			.edit-profile__wrapper
+				.row
+					.col-md-6
+						.edit-user-info
+							form(action="").form-edit-info
+								+form-item('Имя', 'Константин Константинопольский', 'text', 'form-item__group', 'Введите корректные значения')
+								+form-item('Номер телефона', '+7 999 888 77 66', 'text', 'form-item__group', 'Введите корректные значения')
+								+form-item('Улица', 'Комсомольская', 'text', 'form-item__group', 'Введите корректные значения')
+								+form-item('Дом', '28/4', 'text', 'form-item__group', 'Введите корректные значения')
+								+form-item('Подъезд', '3', 'text', 'form-item__group')
+								+form-item('Этаж', '12', 'text', 'form-item__group')
+								+form-item('Квартира', '552', 'text', 'form-item__group')
+								.form-item.form-item--btn.form-item--btn-short
+									button.disable(type='submit') Сохранить изменения
+					.col-md-6
+						.edit-user-pass
+							form(action="").form-edit-info
+								+form-item('Старый пароль', 'Старый пароль', 'password', 'form-item__group', 'Не совпадает')
+								+form-item('Новый пароль', 'Новый пароль', 'password', 'form-item__group')
+								+form-item('Новый пароль еще раз', 'Новый пароль', 'password', 'form-item__group', 'Не совпадает')
+								
+								.form-item.form-item--btn.form-item--btn-short
+									button(type='submit') Сохранить изменения

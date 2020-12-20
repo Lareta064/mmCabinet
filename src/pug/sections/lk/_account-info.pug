@@ -2,6 +2,8 @@
 section.account-info.lk-frame
 	.container
 		.account-info__content
+			.btn-link
+				a(href="#!") Выход
 			.account-info__tabs.custom-tabs
 				.custom-tabs__nav
 					button.tabs__nav-item.active(data-tab="1") Личный кабинет
@@ -13,7 +15,7 @@ section.account-info.lk-frame
 							.col-xl-6
 								+info-list([{text1: 'Имя', text2: 'Константин Константинопольский'}, {text1: 'Номер телефона:', text2: '+7 999 888 77 66'}, {text1: 'E-mail:', text2: 'name@gmail.com'},{text1: 'Адрес доставки:', text2: 'ул. Комсомольская, д. 28/4, кв. 552 Подъезд 3, Этаж 12'}])
 								.form-item.form-item--btn.form-item--btn-short
-									button(type='submit') Редактировать
+									a(href="edit-profile.html") Редактировать
 							.col-xl-6
 								.account-info__reward
 									.form-badge__group
